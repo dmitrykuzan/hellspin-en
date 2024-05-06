@@ -1,0 +1,115 @@
+.features {
+  &__wrapper {
+    position: relative;
+    gap: 10rem;
+
+    @media (max-width: em(992)) {
+      gap: 5rem;
+    }
+  }
+
+  &__text {
+    gap: 2rem;
+  }
+
+  &__title {
+  }
+
+  &__description {
+    gap: 1.5rem;
+  }
+
+  &__content {
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__lists {
+    max-width: 48rem;
+    gap: 4rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__list-block {
+    gap: 2.5rem;
+  }
+
+  &__list-title {
+    font-weight: 700;
+    font-size: fluid-font(3.2rem, 2rem);
+    line-height: 119%;
+    color: var(--clr-primary-300);
+  }
+
+  &__list {
+    gap: 2rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 7rem;
+    min-height: 4.8rem;
+    font-weight: 700;
+    line-height: 150%;
+
+    &--pros,
+    &--cons {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 4.8rem;
+        height: 4.8rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+
+        @media (max-width: em(575)) {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+
+    &--pros {
+      &::before {
+        background-image: url(../img/features/pros.svg);
+      }
+    }
+
+    &--cons {
+      &::before {
+        background-image: url(../img/features/cons.svg);
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-left: 5rem;
+      min-height: 3rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -24rem;
+    bottom: -4rem;
+    width: 85.4rem;
+    height: 68.4rem;
+
+    @media (max-width: em(1500)) {
+      position: initial;
+      right: initial;
+      bottom: initial;
+      width: initial;
+      height: initial;
+      max-width: 85.4rem;
+    }
+  }
+}

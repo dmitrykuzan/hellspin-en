@@ -1,0 +1,32 @@
+.live {
+  &__wrapper {
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 57rem;
+    gap: 4rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__text {
+    gap: 1.5rem;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__image {
+  }
+}

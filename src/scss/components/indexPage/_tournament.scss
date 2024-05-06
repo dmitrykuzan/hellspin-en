@@ -1,0 +1,55 @@
+.tournament {
+  &__wrapper {
+    gap: 10rem;
+
+    @media (max-width: em(992)) {
+      gap: 5rem;
+    }
+  }
+
+  &__top {
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 57rem;
+    gap: 2rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__text {
+    gap: 2rem;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 2rem;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+  }
+
+  &__image {
+  }
+
+  &__info {
+    gap: 3rem;
+  }
+}

@@ -1,0 +1,11 @@
+.header {
+  min-height: 13rem;
+
+  &__wrapper {
+    gap: 2rem;
+  }
+
+  @media (max-width: em(992)) {
+    min-height: 10rem;
+  }
+}

@@ -1,0 +1,11 @@
+.conclusion {
+  padding-bottom: 10rem;
+
+  @media (max-width: em(575)) {
+    padding-bottom: 5rem;
+  }
+
+  &__wrapper {
+    gap: 2rem;
+  }
+}

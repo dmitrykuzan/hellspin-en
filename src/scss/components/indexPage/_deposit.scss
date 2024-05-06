@@ -1,0 +1,21 @@
+.deposit {
+  .bonus__item-wrapper::before {
+    width: 114%;
+  }
+
+  .bonus__item-text {
+    max-width: 58rem;
+
+    @media (max-width: em(992)) {
+      max-width: 42rem;
+    }
+  }
+
+  .bonus__item-image--1 {
+    right: -4rem;
+  }
+
+  &__item-description {
+    gap: 1.5rem;
+  }
+}

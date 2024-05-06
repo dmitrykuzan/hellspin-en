@@ -1,0 +1,167 @@
+.register {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__steps {
+    display: flex;
+    @media (max-width: em(1150)) {
+      display: initial;
+    }
+  }
+
+  &__steps-image {
+    position: absolute;
+    left: -16rem;
+    top: 0;
+    width: 72rem;
+    height: 83rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -44rem;
+      width: 85.3rem;
+      height: 84.3rem;
+      background-image: url(../img/register/rectangle.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: em(1150)) {
+      display: none;
+    }
+  }
+
+  &__steps-content {
+    margin-left: auto;
+    max-width: 57rem;
+    gap: 3rem;
+
+    @media (max-width: em(1150)) {
+      margin-left: initial;
+      max-width: initial;
+    }
+  }
+
+  &__steps-text {
+    gap: 2rem;
+  }
+
+  &__steps-title {
+  }
+
+  &__steps-description {
+  }
+
+  &__steps-table {
+  }
+
+  //log
+  &__log {
+    position: relative;
+    z-index: 2;
+    gap: 3rem;
+
+    &-text {
+      gap: 1.5rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 5rem;
+
+    @media (max-width: em(1100)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(575)) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding-right: 6rem;
+    font-weight: 700;
+    line-height: 150%;
+    gap: 2rem;
+
+    span {
+      position: relative;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+      border: 0.1rem solid var(--clr-primary-450);
+      border-radius: 50%;
+      width: 3.2rem;
+      height: 3.2rem;
+      font-weight: 800;
+      line-height: 100%;
+      color: var(--clr-primary-300);
+      background-color: var(--clr-default-800);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 3.5rem;
+        height: 5.5rem;
+        background-image: url(../img/register/fire.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      @media (max-width: em(575)) {
+        margin-top: 1rem;
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 3.1rem;
+        height: 2rem;
+        background-image: url(../img/register/arrow.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+
+        @media (max-width: em(767)) {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: em(767)) {
+      padding-right: initial;
+    }
+  }
+
+  //info
+  &__info {
+    position: relative;
+    z-index: 2;
+    gap: 10rem;
+
+    @media (max-width: em(767)) {
+      gap: 5rem;
+    }
+  }
+
+  &__text {
+    gap: 2rem;
+  }
+}

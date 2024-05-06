@@ -1,0 +1,130 @@
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.section {
+  padding-top: 10rem;
+
+  @media (max-width: em(575)) {
+    padding-top: 5rem;
+  }
+}
+
+.link__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4rem solid var(--clr-primary-200);
+  border-radius: 1.2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  width: max-content;
+  min-width: 17rem;
+  min-height: 6rem;
+  max-width: 25rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-default-100);
+  background-image: var(--clr-button-400);
+  transition: box-shadow var(--transition);
+
+  @media (max-width: em(1120)) {
+    margin-left: auto;
+  }
+
+  @media (max-width: em(575)) {
+    min-height: 5rem;
+  }
+
+  &:hover {
+    box-shadow: var(--clr-shadow-400);
+    transition: box-shadow var(--transition);
+  }
+}
+
+.link__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4rem solid var(--clr-primary-200);
+  border-radius: 1.2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  width: max-content;
+  min-width: 27rem;
+  min-height: 6rem;
+  max-width: 35rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 125%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-default-800);
+  background-color: var(--clr-primary-300);
+  transition: box-shadow var(--transition);
+
+  @media (max-width: em(575)) {
+    min-width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 1px 16px 35px rgba(252, 194, 17, 0.35),
+      inset 4px 8px 6px rgba(255, 255, 255, 0.35);
+    transition: box-shadow var(--transition);
+  }
+}
+
+.table__short {
+  overflow: auto;
+  border-radius: 2.5rem;
+  padding-top: 3rem;
+  padding-right: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: 2.5rem;
+  background-color: var(--clr-primary-400);
+
+  table {
+    border-collapse: collapse;
+    min-width: 100%;
+
+    tbody {
+      tr {
+        border-radius: 0.6rem;
+
+        &:nth-child(odd) {
+          background-color: var(--clr-primary-500);
+        }
+      }
+
+      td {
+        padding-top: 1.5rem;
+        padding-right: 1.2rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1.2rem;
+        line-height: 150%;
+        color: var(--clr-default-100);
+
+        a {
+          color: var(--clr-default-100);
+        }
+
+        &:first-child {
+          min-width: 17.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: em(575)) {
+    padding: 1.5rem;
+  }
+}

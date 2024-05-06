@@ -1,0 +1,174 @@
+.faq {
+  position: relative;
+
+  &__wrapper-content {
+    gap: 2rem;
+  }
+
+  &__description {
+    margin-bottom: 6rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__wrapper {
+    border-radius: 1.2rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+
+    &:nth-child(1) {
+      background-image: var(--clr-question-400);
+    }
+
+    &:nth-child(2) {
+      background-image: var(--clr-question-500);
+    }
+
+    &:nth-child(3) {
+      background-image: var(--clr-question-600);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+
+      @media (max-width: em(992)) {
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: em(575)) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &.active {
+      .faq__question {
+        span {
+          background: initial;
+          background: #f3f5f6;
+          transition: transform var(--transition),
+            background-color var(--transition);
+        }
+
+        &::before {
+          background-color: var(--clr-default-900);
+          transform: rotate(-45deg);
+          transition: transform var(--transition),
+            background-color var(--transition);
+        }
+
+        &::after {
+          background-color: var(--clr-default-900);
+          transform: rotate(-45deg);
+          transition: transform var(--transition),
+            background-color var(--transition);
+        }
+      }
+
+      .faq__answer {
+        padding-bottom: 5rem;
+        font-weight: 400;
+        font-size: fluid-font(1.8rem, 1.6rem);
+        transition: max-height var(--transition),
+          padding-bottom var(--transition);
+
+        @media (max-width: em(575)) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-left: 2rem;
+    }
+  }
+
+  &__question {
+    position: relative;
+    padding-top: 5rem;
+    padding-right: 4rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: fluid-font(2.8rem, 1.6rem);
+    line-height: 150%;
+    color: var(--clr-default-100);
+
+    span {
+      position: absolute;
+      right: 0;
+      top: 5rem;
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: var(--clr-default-100);
+      transition: transform var(--transition),
+        background-color var(--transition);
+
+      @media (max-width: em(767)) {
+        right: -3.5rem;
+        top: 2.5rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 1.6rem;
+      top: 6rem;
+      z-index: 1;
+      width: 0.2rem;
+      height: 1.6rem;
+      background-color: var(--clr-default-900);
+      transition: transform var(--transition),
+        background-color var(--transition);
+
+      @media (max-width: em(767)) {
+        right: -1.9rem;
+        top: 3.5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0.9rem;
+      top: 6.7rem;
+      z-index: 1;
+      width: 1.6rem;
+      height: 0.2rem;
+      background-color: var(--clr-default-900);
+      transition: transform var(--transition),
+        background-color var(--transition);
+
+      @media (max-width: em(767)) {
+        right: -2.6rem;
+        top: 4.2rem;
+      }
+    }
+
+    @media (max-width: em(767)) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__answer {
+    overflow: hidden;
+    max-height: 0;
+    box-sizing: content-box;
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+    color: var(--clr-default-100);
+    transition: max-height var(--transition), padding-bottom var(--transition);
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
